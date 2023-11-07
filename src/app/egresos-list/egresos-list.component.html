@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-success" (click)="nuevoEgreso()">Nuevo Egreso</button>
+<table class="table table-hover">
+    <thead>
+        <tr class="table-dark">
+            <th>Número</th>
+            <th>Detalle</th>
+            <th>Categoría</th>
+            <th>Fecha</th>
+            <th>Valor</th>
+            <th>Acciones</th>
+          </tr>
+    </thead>
+ <tbody>
+    <tr  class="table-light" *ngFor="let egreso of egresos; let i = index">
+        <td>{{ egreso.numero }}</td>
+        <td>{{ egreso.detalle }}</td>
+        <td>{{ egreso.categoria }}</td>
+        <td>{{ egreso.fecha }}</td>
+        <td>{{ egreso.valor }}</td>
+        <td>
+          <button class="btn btn-info" (click)="editarEgreso(i)">Editar</button>
+          <button class="btn btn-danger" (click)="eliminarEgreso(i)">Eliminar</button>
+        </td>
+      </tr>
+ </tbody>
+</table>
+        </div>
+    </div>
+</div>
+
+
+
